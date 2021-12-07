@@ -1,8 +1,6 @@
 class Utilities:
 
     def get_input() -> list:
-        ret = []
-        with open("input.txt", "r") as f:
-            for x in f.read().splitlines():
-                ret.append(x.split())
-        return ret
+        with open("./input.txt", "r") as f:
+            ip = f.read().split("\n")
+        return ([x for x in ip if x], len(ip[0]))
